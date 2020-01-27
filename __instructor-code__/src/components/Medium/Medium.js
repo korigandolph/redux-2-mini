@@ -8,7 +8,7 @@ class Medium extends Component {
   componentDidMount(){
     this.props.requestArticles()
   }
-
+  
   render() {
     const articles = this.props.articles.map((article => <Card key={article.id} article={article} />))
     return (
@@ -20,7 +20,7 @@ class Medium extends Component {
   }
 }
 
-const mapStateToProps = state =>state.Medium;
+const mapStateToProps = state => state.medium;
 
 export default connect(mapStateToProps, {requestArticles})(Medium);
 
